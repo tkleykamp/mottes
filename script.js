@@ -40,5 +40,5 @@ L.control.scale().addTo(map);
       //   + "<br>Opportunity Level: <b>" + feature.properties.level2014 + "</b>";
     //  layer.bindPopup(popupText);
   //  }
-//  }).addTo(map);
-
+  }).addTo(map);
+ });
