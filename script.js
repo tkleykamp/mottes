@@ -24,7 +24,7 @@ L.control.scale().addTo(map);
 // L.marker([41.767068, -72.716280]).addTo(map);
 
 // point to geojson
- $.getJSON("mottes20.geojson", function (data) { 
+  $.getJSON("mottes20.geojson", function (data) {   // insert pathname to your local directory file
     var geoJsonLayer = L.geoJson(data, {
       style: function (feature) {
         return {
@@ -32,9 +32,9 @@ L.control.scale().addTo(map);
           'weight': 2,
           'fillColor': '#fff',
           'fillOpacity': 0.2
+        }
+      },
 
-     }
-  },
   //   onEachFeature: function( feature, layer) {
 //      var popupText = "Town: <b>" + feature.properties.town + "</b>" + "<br>Tract: <b>" + feature.properties.tract2010 + "</b>"
       //   + "<br>Opportunity Level: <b>" + feature.properties.level2014 + "</b>";
