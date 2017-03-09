@@ -23,17 +23,16 @@ L.control.scale().addTo(map);
 // place a default blue marker on map
 // L.marker([41.767068, -72.716280]).addTo(map);
 
-// Edit file name of the GeoJson map data to be uploaded from your local directory
-$.getJSON("mottes20.geojson", function (data) {
-  var geoJsonLayer = L.geoJson(data, {
-   style: function (feature) {
-    var fillColor,
+// point to geojson
+ $.getJSON("mottes20.geojson", function (data) { 
+    var geoJsonLayer = L.geoJson(data, {
+      style: function (feature) {
+        return {
+          'color': 'red',
+          'weight': 2,
+          'fillColor': '#fff',
+          'fillOpacity': 0.2
 
-     'color': 'red',
-      'weight': 2,
-       'opacity': 1,
-       'fillColor': fillColor,
-      'fillOpacity': 0.5
      }
   },
   //   onEachFeature: function( feature, layer) {
