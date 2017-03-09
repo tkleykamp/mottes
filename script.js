@@ -7,8 +7,8 @@ var map = L.map('map', {
 
 // Edit links to your GitHub repo and data source credit
 map.attributionControl
-.setPrefix('View <a https://github.com/OpenDataCT/mottes">open-source code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
-map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census</a>');
+.setPrefix('View <a "https://github.com/OpenDataCT/mottes">open-source code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
+
 
 // Basemap layer
 new L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
