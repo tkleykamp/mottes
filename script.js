@@ -24,26 +24,18 @@ L.control.scale().addTo(map);
 // L.marker([41.767068, -72.716280]).addTo(map);
 
 // Edit file name of the GeoJson map data to be uploaded from your local directory
-//$.getJSON("opp-index-2014.geojson", function (data) {
-  //var geoJsonLayer = L.geoJson(data, {
-   // style: function (feature) {
-    //  var fillColor,
-    //    level = feature.properties.level2014;
-     // if (level == "Very Low") fillColor = "#fff5cc";
-     // else if (level == "Low") fillColor = "#ffdb94";
-      //else if (level == "Moderate") fillColor = "#ffb84d";
-     // else if (level == "High") fillColor = "#ff9933";
-     // else if (level == "Very High") fillColor = "#ff7519";
-     // else fillColor = "gray"; // no data
-     // return {
-     //   'color': 'gray',
-      //  'weight': 2,
-     //   'opacity': 1,
-     //   'dashArray': 3,
-     //   'fillColor': fillColor,
-     //   'fillOpacity': 0.8
-     // }
-  //  },
+$.getJSON("mottes20.geojson", function (data) {
+  var geoJsonLayer = L.geoJson(data, {
+   style: function (feature) {
+    var fillColor,
+
+     'color': 'red',
+      'weight': 2,
+       'opacity': 1,
+       'fillColor': fillColor,
+      'fillOpacity': 0.5
+     }
+  },
   //   onEachFeature: function( feature, layer) {
 //      var popupText = "Town: <b>" + feature.properties.town + "</b>" + "<br>Tract: <b>" + feature.properties.tract2010 + "</b>"
       //   + "<br>Opportunity Level: <b>" + feature.properties.level2014 + "</b>";
