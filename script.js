@@ -30,8 +30,8 @@ L.control.scale().addTo(map);
         return {
           'color': 'red',
           'weight': 2,
-          'fillColor': '#fff',
-          'fillOpacity': 0.2
+          'fillColor': 'red',
+          'fillOpacity': 0.3
         }
       },
 
