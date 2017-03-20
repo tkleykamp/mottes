@@ -8,12 +8,7 @@ var map = L.map('map', {
 // Edit links to your GitHub repo and data source credit
 map.attributionControl
 .setPrefix('View <a href="https://github.com/OpenDataCT/mottes">open-source code on GitHub</a>, created with <a href="http://leafletjs.com" title="A JS library for interactive maps">Leaflet</a>');
-<!-- Load Esri Leaflet from CDN -->
-    <script src="https://unpkg.com/esri-leaflet@2.0.6"></script>
 
-    <!-- Esri Leaflet Geocoder -->
-    <link rel="stylesheet" href="https://unpkg.com/esri-leaflet-geocoder@2.2.3/dist/esri-leaflet-geocoder.css">
-    <script src="https://unpkg.com/esri-leaflet-geocoder@2.2.3"></script>
 
 
 
@@ -22,18 +17,10 @@ new L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png
 attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>'
 }).addTo(map);
 
-// create the geocoding control and add it to the map
-    var searchControl = L.esri.Geocoding.geosearch().addTo(map);
+// Get your own free Mapzen search API key and see geocoder options at https://github.com/mapzen/leaflet-geocoder
+L.control.geocoder('mapzen-r6S4yi3').addTo(map);
 
-    // create an empty layer group to store the results and add it to the map
-    var results = L.layerGroup().addTo(map);
-
-    // listen for the results event and add every result to the map
-    searchControl.on("results", function(data) {
-        results.clearLayers();
-        for (var i = data.results.length - 1; i >= 0; i--) {
-            results.addLayer(L.marker(data.results[i].latlng));
-
+L.control.scale().addTo(map);
 
 // place a default blue marker on map
 // L.marker([41.767068, -72.716280]).addTo(map);
